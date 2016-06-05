@@ -48,10 +48,14 @@ header{
     height: 80px;
     z-index: 10;
     padding: 10px 0;
+    transition: 0.6s;
 }
 
 header.sticky{
-    background-color: #FF5959;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.4);
+    height: 60px;
+    padding: 0;
+    transition: 0.6s;
 }
 
 header .logo{
@@ -63,6 +67,11 @@ header .logo{
 
 header .logo img{
     width: 60%;;
+}
+
+header.sticky .logo img{
+    width: 50%;
+    padding: 5px 0;
 }
 
 nav{
@@ -90,8 +99,8 @@ nav .nav-menu a{
     font-family: 'quicksandbold';
 }
 
-nav .nav-menu li:hover a,
-nav .nav-menu .nav-sel a{
+nav .nav-menu li:hover .nav-op,
+nav .nav-menu .nav-sel{
     background-color: white;
     color: #FF5959;
 }
@@ -180,6 +189,11 @@ nav .nav-menu .nav-sel a{
     transition: 0.2s;
 }
 
+.btn-act:hover{
+    background-color: white;
+    color: #ff5959;
+}
+
 .btn:focus{
     outline: none;
 }
@@ -192,7 +206,7 @@ nav .nav-menu .nav-sel a{
 /*content*/
 
 .content{
-    padding: 40px 0;
+    padding: 60px 0 40px 0;
 }
 
 .content .content-title{
@@ -212,15 +226,18 @@ nav .nav-menu .nav-sel a{
     overflow: hidden;
 }
 
-.cont-cols-3 .col-3{
+.cont-cols-3 .col-3,
+.cont-cols-3 .post{
     width: 32%;
     float: left;
     margin-right: 2%;
     padding: 20px 0;
     text-align: center;
+    overflow: hidden;
 }
 
-.col-3:last-child{
+.col-3:last-child,
+.post:last-child{
     margin-right: 0;
 }
 
@@ -243,7 +260,8 @@ nav .nav-menu .nav-sel a{
     color: white;
 }
 
-#portfolio .content-divider{
+#portfolio .content-divider,
+#blog .content-divider{
     border: 1px solid white;
 }
 
@@ -424,4 +442,166 @@ nav .nav-menu .nav-sel a{
 .member .member-icon:hover{
     background-color: #ff5959;
     transition: 0.4s;
+}
+
+/*blog*/
+
+#blog{
+    background-color: #ff5959;
+    color: white;
+}
+
+.cont-cols-3 .post{
+    position:relative;
+    text-align: left;
+}
+
+.cont-cols-3 .post img{
+    width: 100%;
+}
+
+.post .blog-title{
+    margin: 10px 0 5px 0;
+    font-family: 'quicksandbold';    
+}
+
+.post .blog-date{
+    overflow: hidden;
+    padding: 5px 0;
+}
+
+.post .blog-date .b-date-icon{
+    width: 10%;
+    float: left;
+    text-align: center;
+    padding: 5px;
+}
+
+.post .blog-date .b-date-par{
+    width: 90%;
+    float: left;
+    padding: 5px 0;
+    font-family: 'quicksandlight';
+}
+
+.post .blog-icons{
+    padding: 5px 0;
+}
+
+.post .blog-icons .blog-editor{
+    width: 40%;
+    float: left;
+    padding: 5px;
+}
+
+.post .blog-icons .blog-comment{
+    width: 60%;
+    float: left;
+    padding: 5px;
+}
+
+/*contact*/
+
+#contact{
+    background-color: #e8e8e8;
+}
+
+.content .cont-cols-2{
+    padding: 40px 0;
+}
+
+.content .cont-cols-2>div{
+    width: 49%;
+    float: left;
+    margin-right: 2%;
+}
+
+.content .cont-cols-2>div:last-child{
+    margin-right: 0;
+}
+
+.contact-form .input-100 {
+    width: 100%;
+    padding: 10px 5px;
+    border: 2px solid white;
+    border-radius: 10px;
+    margin: 0 0 10px 0;
+    font-family: 'quicksandlight';
+    font-size: 1em;
+    resize: none;
+}
+
+.contact-form .input-100:focus{
+    outline: none;
+    border: 2px solid #ff5959;
+}
+
+.contact-info .contact-title{
+    margin-bottom: 15px;
+}
+
+.contact-info .contact-par{
+    padding: 5px 0;
+    margin-bottom: 10px;
+}
+
+.contact-info .contact-dirtel{
+    padding: 10px 0;
+    font-weight: bold;
+}
+
+.contact-info .contact-btns{
+    padding: 15px 0;
+    width: 80%;
+    margin-right: 20%;
+}
+
+.contact-btns .btn{
+    width: 48%;
+    float: left;
+    margin-right: 4%;
+    font-family: 'droid_sansbold';
+}
+
+.contact-btns .btn:last-child{
+    margin-right: 0;
+    color: black;
+}
+
+.contact-btns .btn:last-child:hover{
+    color: white;
+}
+
+/*footer*/
+
+footer{
+    background-color: #ff5959;
+    position: relative;
+    bottom: 0;
+    padding: 20px 0;
+    overflow: hidden;
+}
+
+footer .footer-logo{
+    width: 30%;
+    float: left;
+    overflow: hidden;
+}
+
+footer .footer-copy{
+    width: 70%;
+    float: left;
+    padding: 20px 0;
+    text-align: right;
+    color: white;
+    font-family: 'quicksandlight';
+}
+
+.footer-copy a{
+    color: rgba(255, 255, 255, 0.5);
+    transition: 0.6s;
+}
+
+.footer-copy a:hover{
+    color: white;
 }
